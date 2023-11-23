@@ -105,7 +105,7 @@ def parse_arguments():
         error(
             f"Invalid branch type {TYPE}. Accepted types: {VALID_TYPES}\n{get_usage()}"
         )
-    TYPE = CONFIG[TYPE]
+    TYPE = CONFIG[TYPE.upper()]
     if not NAME:
         error(f"branch_name is required.\n{get_usage()}")
 
